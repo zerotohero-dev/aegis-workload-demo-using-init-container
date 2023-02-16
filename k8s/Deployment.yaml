@@ -56,9 +56,11 @@ spec:
       #
       # -f json: means that Aegis API will present the value of the secret as
       #          a JSON object. Alternatively `-f yaml` will present it as YAML.
-      #          When not provided, this setting defaults to yaml.
-      #          For the `-f` setting to be effective, a `-t` template
-      #          transformation must be provided too.
+      #          When not provided, this setting defaults to `none` (*which will
+      #          display the value as is without any transformation*). If there
+      #          exists a `-t`, it will be honored while creating keys and
+      #          values. If not, Aegis Safe will assume an identity
+      #          transformation.
       #
       # -e: means the values of the secrets will be encrypted via the Aegis Safe
       #     public key before sending them to Aegis. This is especially useful
