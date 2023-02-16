@@ -27,7 +27,15 @@ spec:
       containers:
       - name: main
         image: z2hdev/aegis-workload-demo-using-init-container:0.12.55
+        env:
+          - name: SECRET
+            valueFrom:
+              secretKeyRef:
+                name: aegis-secret-aegis-workload-demo
+                key: VALUE
 
+      initContainers:
+      #
       # To make the init container exit successfully and initialize the main
       # container above, execute the following in Aegis Sentinel:
       #
