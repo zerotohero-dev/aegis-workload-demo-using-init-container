@@ -30,7 +30,11 @@ func main() {
 	}()
 
 	for {
-		fmt.Printf("My secret: '%s'.", os.Getenv("SECRET"))
+		fmt.Printf("My secret: '%s'.\n", os.Getenv("SECRET"))
+		fmt.Printf("My creds: username:'%s' password:'%s'.\n",
+			os.Getenv("USERNAME"), os.Getenv("PASSWORD"),
+		)
+		fmt.Println("")
 
 		time.Sleep(5 * time.Second)
 	}

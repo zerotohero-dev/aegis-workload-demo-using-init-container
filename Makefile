@@ -6,10 +6,10 @@
 #     .\_/.
 #
 
-VERSION=0.12.55
-PACKAGE=aegis-workload-demo-using-sdk-and-init-container
-REPO=z2hdev/aegis-workload-demo-using-sdk-and-init-container
-REPO_LOCAL="localhost:5000/aegis-workload-demo-using-sdk-and-init-container"
+VERSION=0.12.70
+PACKAGE=aegis-workload-demo-using-init-container
+REPO=z2hdev/aegis-workload-demo-using-init-container
+REPO_LOCAL="localhost:5000/aegis-workload-demo-using-init-container"
 
 all: build bundle push deploy
 
